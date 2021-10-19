@@ -1,6 +1,6 @@
 import { Switch } from "@headlessui/react";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -8,11 +8,18 @@ function classNames(...classes) {
 
 export default function ThemeToggle() {
 
+    const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme();
+
+    // When mounted on client, now we can show the UI
+    useEffect(() => setMounted(true), [])
+
+    if (!mounted) return null
 
     const toggleTheme = () => {
       setTheme(theme === 'light' ? 'dark' : 'light');
     };
+
 
     return (
         <Switch
