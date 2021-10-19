@@ -5,7 +5,7 @@ import Header from "./header"
 const people = [
     {
         name: 'Olivia Leigh',
-        role: 'CEO',
+        role: '',
         imageUrl:
           'https://images.squarespace-cdn.com/content/v1/5f549b003e5b8919789163ae/1613046423277-NB7V0UE7PUUBRIF2QB43/18.jpg',
         bio:
@@ -15,7 +15,7 @@ const people = [
       },
       {
         name: 'Tamzin Lent',
-        role: '???',
+        role: '',
         imageUrl:
           'https://images.squarespace-cdn.com/content/v1/5f549b003e5b8919789163ae/1613046519125-8DC0ZL8XJ6IPY0F3UPTI/19.jpg',
         bio:
@@ -25,7 +25,7 @@ const people = [
       },
       {
         name: 'Jamie Legg',
-        role: 'CTO',
+        role: '',
         imageUrl:
           'https://pbs.twimg.com/profile_images/1314596328199127040/gI4PBZe2.jpg',
         bio:
