@@ -1,33 +1,8 @@
 import React from "react"
 import Header from "./header"
 
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
 const people = [
-    {
-      name: 'Jamie Legg',
-      role: 'CTO',
-      imageUrl:
-        'https://pbs.twimg.com/profile_images/1314596328199127040/gI4PBZe2.jpg',
-      bio:
-        'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
-      twitterUrl: '#',
-      linkedinUrl: '#',
-    },
     {
         name: 'Olivia Leigh',
         role: 'CEO',
@@ -48,8 +23,17 @@ const people = [
         twitterUrl: '#',
         linkedinUrl: '#',
       },
-    // More people...
-  ]
+      {
+        name: 'Jamie Legg',
+        role: 'CTO',
+        imageUrl:
+          'https://pbs.twimg.com/profile_images/1314596328199127040/gI4PBZe2.jpg',
+        bio:
+          'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+        twitterUrl: '#',
+        linkedinUrl: '#',
+      },
+    ]
   
   export default function AboutContent() {
     return (
