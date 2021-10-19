@@ -1,5 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import Link from 'next/link'
+
+import React, { Fragment } from 'react'
+import Image from 'next/image'
+import nightClubCrowd from '../assets/nightclubBackground.jpeg'
 import { Popover, Transition } from '@headlessui/react'
 import {
   AnnotationIcon,
@@ -201,21 +203,20 @@ export default function LandingContent() {
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
-                <img
+                <Image width={1250} height={600} 
                   className="h-full w-full object-cover"
-                  src="https://i.imgur.com/umCU5pG.png"
-                  alt="People working on laptops"
+                  src={nightClubCrowd}
+                  alt="night club crowd"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-indigo-700 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">Take control of your</span>
-                  <span className="block text-indigo-200">customer support</span>
+                  <span className="block text-white">Connect Your Spaces</span>
+                  <span className="block text-indigo-200">Reduce Your Risks</span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                  Offline Bluetooth connectivity for your Events and Venues
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -238,11 +239,11 @@ export default function LandingContent() {
           </div>
         </div>
 
-        {/* Logo Cloud */}
-        <div className="dark:bg-gray-900 bg-gray-100">
+        {/* videos*/}
+        <div className="bg-gray-100 dark:bg-gray-900">
           <div className="flex justify-between max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bz6Wmzao9MQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HpkD68qVjJE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe className='rounded-2xl' width="560" height="315" src="https://www.youtube-nocookie.com/embed/bz6Wmzao9MQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe className='rounded-2xl' width="560" height="315" src="https://www.youtube-nocookie.com/embed/HpkD68qVjJE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
 
