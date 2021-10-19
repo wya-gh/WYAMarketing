@@ -37,7 +37,7 @@ const people = [
   
   export default function AboutContent() {
     return (
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-900 dark:bg-gray-900">
           <Header />
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">

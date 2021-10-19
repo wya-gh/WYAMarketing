@@ -108,7 +108,7 @@ const footerNavigation = {
 
 export default function ContactContent() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Popover as="header" className="relative">
         <Header/>
         <Transition
@@ -121,7 +121,7 @@ export default function ContactContent() {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top lg:hidden">
-            <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="rounded-lg shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img

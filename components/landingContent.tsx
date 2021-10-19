@@ -187,9 +187,9 @@ function classNames(...classes) {
 
 export default function LandingContent() {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-gray-900">
       <header>
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-white dark:bg-gray-900">
 
         <Header/>
         </Popover>
@@ -221,7 +221,7 @@ export default function LandingContent() {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white dark:bg-gray-900 hover:bg-indigo-50 sm:px-8"
                     >
                       Get started
                     </a>
@@ -367,7 +367,7 @@ export default function LandingContent() {
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white dark:bg-gray-900 bg-opacity-10">
                       <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
