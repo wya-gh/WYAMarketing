@@ -218,6 +218,7 @@ export default function LandingContent() {
                   <span className="block text-white px-4">Connect Your Spaces</span>
                   <span className="block text-indigo-200">Reduce Your Risks</span>
                 </h1>
+                
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                   Offline Bluetooth connectivity for your Events and Venues
                 </p>
