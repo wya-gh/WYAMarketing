@@ -1,7 +1,9 @@
 
 import React, { Fragment } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import nightClubCrowd from '../assets/nightclubBackground.jpeg'
+import { useTheme } from 'next-themes'
 import { Popover, Transition } from '@headlessui/react'
 import {
   AnnotationIcon,
@@ -20,7 +22,6 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
-import Header from './header'
 
 const solutions = [
   {
@@ -185,20 +186,22 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function LandingContent() {
-  return (
-    <div className="bg-white dark:bg-gray-900">
-      <header>
-        <Popover className="relative bg-white dark:bg-gray-900">
 
-        <Header/>
+export default function LandingContent() {
+
+  
+  return (
+    <div className="dark:bg-gray-900 bg-white ">
+      <header>
+        <Popover className="relative dark:bg-gray-900 bg-white ">
+
         </Popover>
       </header>
 
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 dark:bg-gray-900 bg-gray-100" />
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
@@ -209,38 +212,46 @@ export default function LandingContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-indigo-700 mix-blend-multiply" />
               </div>
-              <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+              <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 ">
+                <div className='class="m-12 dark:bg-gray-900 dark:bg-opacity-60  w-max mx-auto rounded-2xl bg-clip-padding backdrop-blur-sm "'>
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">Connect Your Spaces</span>
+                  <span className="block text-white px-4">Connect Your Spaces</span>
                   <span className="block text-indigo-200">Reduce Your Risks</span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                   Offline Bluetooth connectivity for your Events and Venues
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                  <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                  <div className="pb-2 space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 ">
+                    <Link href="/pricing">
                     <a
-                      href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white dark:bg-gray-900 hover:bg-indigo-50 sm:px-8"
+                      
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md dark:bg-gray-900  shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
                     >
                       Get started
                     </a>
+                    </Link>
                     <a
-                      href="#"
+                      onClick={() => window.scrollBy({
+                      top: 500,
+                      behavior: 'smooth'
+                    })}
                       className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Live demo
                     </a>
                   </div>
                 </div>
+                </div>
+         
               </div>
             </div>
           </div>
         </div>
 
         {/* videos*/}
-        <div className="bg-gray-100">
-          <div className="flex justify-between max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="dark:bg-gray-900 bg-gray-100 mt-10">
+          <div className="flex justify-between mx-auto py-20 px-4 sm:px-6 lg:px-8">
           <iframe className='rounded-2xl' width="560" height="315" src="https://www.youtube-nocookie.com/embed/bz6Wmzao9MQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <iframe className='rounded-2xl' width="560" height="315" src="https://www.youtube-nocookie.com/embed/HpkD68qVjJE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
@@ -248,7 +259,7 @@ export default function LandingContent() {
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b dark:from-gray-900 from-gray-100" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -259,7 +270,7 @@ export default function LandingContent() {
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h2 className="text-3xl font-extrabold tracking-tight dark:text-gray-100 text-gray-900">
                       Stay on top of customer support
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
@@ -367,7 +378,7 @@ export default function LandingContent() {
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white dark:bg-gray-900 bg-opacity-10">
+                    <span className="flex items-center dark:bg-gray-900 justify-center h-12 w-12 rounded-md  bg-white bg-opacity-10">
                       <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
@@ -382,12 +393,12 @@ export default function LandingContent() {
         </div>
 
         {/* Stats section */}
-        <div className="relative bg-gray-900">
+        <div className="relative dark:bg-gray-900 bg-white">
           <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
             <div className="h-full w-full xl:grid xl:grid-cols-2">
               <div className="h-full xl:relative xl:col-start-2">
                 <img
-                  className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
+                  className="h-full w-full object-cover dark:opacity-25 xl:absolute xl:inset-0"
                   src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
                   alt="People working on laptops"
                 />
@@ -428,7 +439,7 @@ export default function LandingContent() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-white">
+        <div className="dark:bg-gray-900 bg-white">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               <span className="block">Ready to get started?</span>
@@ -454,7 +465,7 @@ export default function LandingContent() {
         </div>
       </main>
 
-      <footer className="bg-gray-50" aria-labelledby="footer-heading">
+      <footer className="dark:bg-gray-900 bg-gray-50" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
@@ -531,7 +542,7 @@ export default function LandingContent() {
                   id="email-address"
                   autoComplete="email"
                   required
-                  className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
+                  className="appearance-none min-w-0 w-full dark:bg-gray-900 bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
                   placeholder="Enter your email"
                 />
                 <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">

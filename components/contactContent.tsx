@@ -2,7 +2,6 @@
 import React, { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MailIcon, MenuIcon, PhoneIcon, XIcon } from '@heroicons/react/outline'
-import Header from './header'
 
 const navigation = [
   { name: 'Changelog', href: '#' },
@@ -108,9 +107,8 @@ const footerNavigation = {
 
 export default function ContactContent() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen dark:bg-gray-900 bg-white ">
       <Popover as="header" className="relative">
-        <Header/>
         <Transition
           as={Fragment}
           enter="duration-150 ease-out"
@@ -121,7 +119,7 @@ export default function ContactContent() {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top lg:hidden">
-            <div className="rounded-lg shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="rounded-lg shadow-lg  bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img
@@ -179,7 +177,7 @@ export default function ContactContent() {
         </div>
 
         {/* Contact section */}
-        <section className="relative bg-white" aria-labelledby="contact-heading">
+        <section className="relative dark:bg-gray-900 bg-white" aria-labelledby="contact-heading">
           <div className="absolute w-full h-1/2 bg-warm-gray-50" aria-hidden="true" />
           {/* Decorative dot pattern */}
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,7 +206,7 @@ export default function ContactContent() {
             </svg>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-white shadow-xl">
+            <div className="relative dark:bg-black bg-white shadow-xl">
               <h2 id="contact-heading" className="sr-only">
                 Contact us
               </h2>
@@ -313,7 +311,7 @@ export default function ContactContent() {
                       </defs>
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-white">Contact information</h3>
+                  <h3 className="text-lg font-medium ">Contact information</h3>
                   <p className="mt-6 text-base text-teal-50 max-w-3xl">
                     Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
                     lacus arcu.

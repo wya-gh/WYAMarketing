@@ -14,7 +14,6 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 
-import Header from './header'
 
 const solutions = [
   {
@@ -193,10 +192,9 @@ function classNames(...classes) {
 
 export default function PricingContent() {
   return (
-    <div className="bg-white">
+    <div className="dark:bg-gray-900 bg-white ">
       <Popover className="relative">
 
-        <Header/>
 
         <Transition
           as={Fragment}
@@ -208,7 +206,7 @@ export default function PricingContent() {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-900  bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
@@ -219,67 +217,11 @@ export default function PricingContent() {
                     />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <Popover.Button className="dark:bg-gray-900 bg-white  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
-                </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-8">
-                    {solutions.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                      >
-                        <item.icon className="flex-shrink-0 h-6 w-6 text-blue-600" aria-hidden="true" />
-                        <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-              </div>
-              <div className="py-6 px-5 space-y-6">
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Pricing
-                  </a>
-
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Docs
-                  </a>
-
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Blog
-                  </a>
-
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Contact Sales
-                  </a>
-                  {resources.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
-                  >
-                    Sign up
-                  </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
-                    Existing customer?{' '}
-                    <a href="#" className="text-blue-600 hover:text-blue-500">
-                      Sign in
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>
@@ -287,13 +229,13 @@ export default function PricingContent() {
         </Transition>
       </Popover>
 
-      <div className="bg-gradient-to-b from-blue-50 via-white to-white">
+      <div className=" dark:bg-gray-900 bg-white">
         {/* Pricing section with single price and feature list */}
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="pb-16 xl:flex xl:items-center xl:justify-between">
             <div>
               <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
-                <span className="text-gray-900">Everything you need for </span>
+                <span className="light:text-gray-900">Everything you need for </span>
                 <span className="text-blue-600">$99 a month</span>
               </h1>
               <p className="mt-5 text-xl text-gray-500">
@@ -310,7 +252,7 @@ export default function PricingContent() {
           <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
             <div>
               <h2 className="text-base font-semibold text-blue-600 uppercase tracking-wide">Everything you need</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900">All-in-one platform</p>
+              <p className="mt-2 text-3xl font-extrabold light:text-gray-900">All-in-one platform</p>
               <p className="mt-4 text-lg text-gray-500">
                 Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla
                 nec. Urna, sed a lectus elementum blandit et.
@@ -344,13 +286,13 @@ export default function PricingContent() {
       {/* Branded FAQ */}
       <div className="bg-blue-900">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
+          <h2 className="text-3xl font-extrabold dark:text-gray-900 text-white">Frequently asked questions</h2>
           <div className="mt-6 border-t border-blue-400 border-opacity-25 pt-10">
             <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
               {faqs.map((item) => (
                 <div key={item.id}>
-                  <dt className="text-lg leading-6 font-medium text-white">{item.question}</dt>
-                  <dd className="mt-2 text-base text-blue-200">{item.answer}</dd>
+                  <dt className="text-lg leading-6 font-medium dark:text-gray-900 text-white">{item.question}</dt>
+                  <dd className="mt-2 text-base dark:text-gray-900 text-blue-200">{item.answer}</dd>
                 </div>
               ))}
             </dl>
@@ -383,7 +325,7 @@ export default function PricingContent() {
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
           {footerNavigation.main.map((item) => (
             <div key={item.name} className="py-2 px-5">
-              <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+              <a href={item.href} className="text-base text-gray-500 dark:hover:text-gray-100 hover:text-gray-900">
                 {item.name}
               </a>
             </div>
