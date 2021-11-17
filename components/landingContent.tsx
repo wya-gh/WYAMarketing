@@ -1,8 +1,10 @@
 
 import React, { Fragment } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import nightClubCrowd from '../assets/nightclubBackground.jpeg'
+import wyaConsoleImg from '../assets/wyaconcole.jpeg'
+// import Bbeacon from '../assets/Beacon.JPG'
 import { useTheme } from 'next-themes'
 import { Popover, Transition } from '@headlessui/react'
 import {
@@ -191,7 +193,7 @@ export default function LandingContent() {
 
   
   return (
-    <div className="dark:bg-gray-900 bg-white ">
+    <div className="dark:bg-gray-900 bg-gray-100 pt-4">
       <header>
         <Popover className="relative dark:bg-gray-900 bg-white ">
 
@@ -201,15 +203,15 @@ export default function LandingContent() {
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 dark:bg-gray-900 bg-gray-100" />
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="absolute inset-x-0 bottom-0 h-1/2 dark:bg-gray-900  bg-gray-100" />
+           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
-                <Image width={1250} height={600} 
+                {/* <Image width={1250} height={600} 
                   className="h-full w-full object-cover"
                   src={nightClubCrowd}
                   alt="night club crowd"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-indigo-700 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 ">
@@ -272,7 +274,7 @@ export default function LandingContent() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight dark:text-gray-100 text-gray-900">
-                      Stay on top of customer support
+                      Equipt your Venues 
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
@@ -316,11 +318,11 @@ export default function LandingContent() {
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
                 <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                    alt="Inbox user interface"
-                  />
+                  {/* <Image width={350} height={350}
+                    className=" rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 "
+                    src={Bbeacon}
+                    alt="WYA branded beacon"
+                  /> */}
                 </div>
               </div>
             </div>
@@ -356,11 +358,11 @@ export default function LandingContent() {
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
+                  {/* <Image width={1500} height={1000}
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                    src={wyaConsoleImg}
                     alt="Customer profile user interface"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

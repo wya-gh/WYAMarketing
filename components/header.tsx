@@ -1,20 +1,8 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
-import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CheckIcon,
-  CursorClickIcon,
-  MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+// import Image from 'next/image'
+import logo from '../assets/blackWYAlogo.jpeg'
+
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import ThemeToggle from './ThemeToggle'
 
@@ -28,31 +16,31 @@ export default function Header() {
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
             <span className="sr-only">Workflow</span>
-            <img
-              className="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
+            {/* <img
+              className="rounded-full"
+              src={logo}
               alt=""
-            />
+            ></img> */}
           </a>
         </div>
 
         <Link href='/'>
-          <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a className="dark:hover:text-gray-100 text-base font-medium text-gray-500 hover:text-gray-900">
             Home
           </a> 
         </Link>
         <Link href='/pricing'>
-          <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a className="dark:hover:text-gray-100 text-base font-medium text-gray-500 hover:text-gray-900">
             Pricing
           </a>
         </Link>
         <Link href='/about'>
-          <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a className="dark:hover:text-gray-100 text-base font-medium text-gray-500 hover:text-gray-900">
             About
           </a>
         </Link>
         <Link href='/contact'>
-          <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a className="dark:hover:text-gray-100 text-base font-medium text-gray-500 hover:text-gray-900">
             Contact
           </a>
         </Link>

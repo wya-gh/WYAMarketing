@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "./header"
 
 
 const people = [
@@ -37,15 +36,13 @@ const people = [
   
   export default function AboutContent() {
     return (
-      <div className="dark:bg-gray-900 bg-white ">
+      <div className="dark:bg-gray-900 bg-gray-100 ">
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="space-y-5 sm:space-y-4">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">About Us</h2>
               <ul className="text-xl text-gray-500">
-             <li> We are committed to building back safer after the pandemic.</li><br/>
-             <li> We are passionate about preventing sexual assault and harassment and promoting transparency.</li><br/>
-             <li> We pledge to donate 5% of profits to RAINN and the Good Night Out Campaign.</li><br/>
+<p>Where You At is an award-winning app aiming to make nights out safer for everyone, featured in publications such as The Guardian and We Rave You. The female-founded app has grown since its launch in October 2020 by two Oxford undergraduates, after seeing friends put in dangerous situations on nights out. Using offline Bluetooth technology and indoor positioning, WYA allows you to precisely locate friends in crowded spaces without needing an internet connection. No more nights walking home late at night alone. No more wandering up and down club dance floors looking for a mate. WYA. We are an ambitious team with big plans to launch across university campuses this Autumn.</p>
               </ul>
               
             </div>
